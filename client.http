@@ -1,4 +1,5 @@
 @baseUrl = http://localhost:3500
+@authToken ={{authenticate.response.body.access_token}}
 
 # @name create_account
 POST {{baseUrl}}/accounts
@@ -26,7 +27,7 @@ Content-Type: application/json
 # @name create_Questions
 POST {{baseUrl}}/questions
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhOWU0NjU3MS00MmJiLTQwNWUtOThjZS05ZTk2YmJlN2U4M2EiLCJpYXQiOjE3MDg1MjA5OTl9.YZOtxbV9XbT7ESqi0KOT90FoKaC6N4awZ6lYwlwzFstkdJA-Xp3puCAhUUs3rlkN_ayyKLwFaUIxeamjfUZvHjaO4cm16bvv5xaTnN9nwASK-ujh_yimzxh_kuxCx7pi9EmYbnigYcMwbnFzOosw-xf-8uP2fJFC_iQ2wvk0g_PTyGSF2z9SPq99x3lOE4VOTEZKVe54VPPwCbxEDTCzh-I7B1TdPBr3puCfJeLFXkt32nrXofK8ppdj4GQvfE4J6rrBa_qIP4-JN4_yqEZv_TPuvNBNg_HLFy7gTVlAYrrFp4bbIYSsAxC96NRjHb88xcGr_VgmQ1P0pBgyTh-Ztw
+Authorization: Bearer {{authToken}}
 
 {
   "email":"mattheus1@mail.com",
